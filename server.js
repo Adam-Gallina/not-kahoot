@@ -1,5 +1,16 @@
 const port = process.env.PORT || 2282
 
+require('./api/game')
+const Game = require('./api/gameloop')
+Game.SetQuestionList(
+    [
+        { q:'1+1', a0:'2', a1:'-1', a2:'0', a3:'69', c:0 },
+        { q:'what color is the sky', a0:'green', a1:'ur mom', a2:'sky', a3:'blue', c:2 },
+        { q:'Is?', a0:'nof', a1:'finkaboutit', a2:'um', a3:'yef', c:3 }
+    ]
+)
+Game.InitNewGame()
+
 
 const express = require('express')
 const exphbs = require('express-handlebars')

@@ -1,1 +1,39 @@
-<p>This is the host</p>
+<link rel="stylesheet" href="basic.css"></script>
+
+<script src="/socket.io/socket.io.js"></script>
+
+<script src="host.js" defer></script>
+
+<div id="lobby">
+    <p>Players</p>
+    <ul id="player-list"></ul>
+
+    <input type="submit" id="start" value="Start Game">
+</div>
+
+<div id="question-start" hidden>
+    <p id="question-text">Question goes here</p>
+    
+    <div id="question-answers" hidden>
+        <div id="answers">
+            <p id="answer0" class="answer red">Answer0 goes here</p>
+            <p id="answer1" class="answer green">Answer1 goes here</p>
+            <p id="answer2" class="answer blue">Answer2 goes here</p>
+            <p id="answer3" class="answer yellow">Answer3 goes here</p>
+        </div>
+    </div>
+</div>
+
+<div id="answer-display">
+
+</div>
+
+<div id="scoreboard" hidden>
+
+</div>
+
+<div id="complete" hidden>
+    <p>The game ended! Good job winner. The loser sucks tho</p>
+</div>
+
+<input type="submit" id="stop" value="Stop Game">

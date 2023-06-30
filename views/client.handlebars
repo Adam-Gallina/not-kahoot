@@ -1,14 +1,31 @@
+<link rel="stylesheet" href="basic.css"></script>
+
 <script src="/socket.io/socket.io.js"></script>
 
 <script src="client.js" defer></script>
 
-<label for="nicknameText">Nickname</label>
-<input type="text" id="nicknameInp" value="">
-<input type="submit" id="nicknameSubmit" value="submit">
+<div id="name-entry">
+    <label for="nicknameInp">Nickname</label>
+    <input type="text" id="nicknameInp" value="">
+    <input type="submit" id="nicknameSubmit" value="submit">
+</div>
 
-<br><br>
+<div id="lobby" hidden>
+    <p>Waiting for host to start...</p>
+</div>
 
-<input type="submit" id="option0" class="inpbtn red" value="option0" hidden>
-<input type="submit" id="option1" class="inpbtn green" value="option1" hidden>
-<input type="submit" id="option2" class="inpbtn blue" value="option2" hidden>
-<input type="submit" id="option3" class="inpbtn yellow" value="option3" hidden>
+<div id="option-select" hidden>
+    <input type="submit" id="option0" class="answer red" value="">
+    <input type="submit" id="option1" class="answer green" value="">
+    <input type="submit" id="option2" class="answer blue" value="">
+    <input type="submit" id="option3" class="answer yellow" value="">
+</div>
+
+<div id="score-display" hidden>
+    <p>Score is unknown</p>
+</div>
+
+<footer>
+    <p id="nickname-display">Nickname</p>
+    <p id="footer-score">Score: 0</p>
+</footer>
